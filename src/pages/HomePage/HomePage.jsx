@@ -1,4 +1,3 @@
-import clsx from "clsx";
 import { Container, Section } from "../../shared";
 import css from "./HomePage.module.css";
 

@@ -15,7 +15,7 @@ import storage from "redux-persist/lib/storage";
 const camperPersistConfig = {
   key: "camperSlice",
   storage,
-  whitelist: ["persis"],
+  whitelist: ["favoritesItems"],
 };
 
 const persistedCamperReducer = persistReducer(

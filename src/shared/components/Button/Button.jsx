@@ -9,9 +9,6 @@ const Button = ({
   ...props
 }) => {
   return (
-    // <div className={clsx(css.button, { [className]: className })}>
-    //   {children}
-    //   </div>
     <button
       type={type}
       onClick={onClick}

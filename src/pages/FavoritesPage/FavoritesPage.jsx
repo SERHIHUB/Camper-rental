@@ -1,10 +1,14 @@
-import clsx from "clsx";
-import css from "./FavoritesPage.module.css";
+import FavoritesList from "../../components/FavoritesList/FavoritesList";
+import { Container, Section } from "../../shared";
 
 const FavoritePage = () => {
   return (
     <div>
-      <h2>Favoritw page</h2>
+      <Section>
+        <Container>
+          <FavoritesList />
+        </Container>
+      </Section>
     </div>
   );
 };

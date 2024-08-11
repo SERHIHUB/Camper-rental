@@ -11,4 +11,25 @@
   padding: 12px;
   background-color: #f2f4f7;
   border-radius: 100px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 8px;
+}
+
+.iconPetrol,
+.iconAdults {
+  fill: #000;
+  stroke: none;
+}
+
+.icon {
+  fill: none;
+  stroke: #000;
+}
+
+.iconAC {
+  fill: none;
+  stroke: #fff;
 }

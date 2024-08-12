@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getFavoritesCampers } from "../../redux/campers/operations";
 import { useState } from "react";
 
-import CamperDetails from "../CamperDetails/Camperdetails";
+import CamperDetails from "../CamperDetails/CamperDetails";
 import css from "./CamperItem.module.css";
 import { selectFavoritesCampers } from "../../redux/campers/selectors";
 import { newMyCampers } from "../../redux/campers/slice";

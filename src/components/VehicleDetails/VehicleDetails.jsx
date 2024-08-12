@@ -20,11 +20,11 @@ const VehicleDetails = () => {
           {`${camper.adults} adults`}
         </li>
         <li className={css.listItem}>
-          <Icon iconId="icon-transmission" />
+          <Icon iconId="icon-transmission" className={css.icon} />
           {camper.transition && firstLetterUpper(camper.transmission)}
         </li>
         <li className={css.listItem}>
-          <Icon iconId="icon-ac" />
+          <Icon iconId="icon-ac" className={css.icon} />
           {camper.details.airConditioner && `AC`}
         </li>
         <li className={css.listItem}>
@@ -40,15 +40,15 @@ const VehicleDetails = () => {
           {`${camper.details.beds} beds`}
         </li>
         <li className={css.listItem}>
-          <Icon iconId="icon-conditioner" />
+          <Icon iconId="icon-conditioner" className={css.icon} />
           {`${camper.details.airConditioner} air conditioner`}
         </li>
         <li className={css.listItem}>
-          <Icon iconId="icon-cd" />
+          <Icon iconId="icon-cd" className={css.icon} />
           {camper.details.CD && `CD`}
         </li>
         <li className={css.listItem}>
-          <Icon iconId="icon-radio" />
+          <Icon iconId="icon-radio" className={css.icon} />
           {camper.details.radio && `Radio`}
         </li>
         <li className={css.listItem}>
@@ -56,7 +56,7 @@ const VehicleDetails = () => {
           {`${camper.details.hob} hob`}
         </li>
       </ul>
-      <h3 className={css.vehicleTitle}>Vehicle details</h3>
+      <h2 className={css.vehicleTitle}>Vehicle details</h2>
       <div className={css.border}></div>
       <ul className={css.detailsList}>
         <li className={css.detailsItem}>

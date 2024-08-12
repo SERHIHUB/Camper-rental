@@ -6,7 +6,6 @@ const camperSlice = createSlice({
   initialState: {
     items: [],
     favoritesItems: [],
-    currentCamp: [],
     loading: false,
     error: false,
   },
@@ -40,11 +39,6 @@ const camperSlice = createSlice({
       .addCase("campers/delete", (state, action) => {
         state.favoritesItems = state.favoritesItems.filter(
           (item) => item._id !== action.payload
-        );
-      })
-      .addCase("camper/details", (state, action) => {
-        state.currentCamp = state.items.filter(
-          (item) => item._id === action.payload
         );
       }),
 });

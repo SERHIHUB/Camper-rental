@@ -6,12 +6,52 @@
   margin-bottom: 24px;
 }
 
+.titleContainer {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 16px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f7f7f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e44848;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.starsContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  align-items: flex-start;
+}
+
 .title {
   font-size: 18px;
   font-weight: 600;
 }
 
+.starList {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 4px;
+}
+
 .text {
   font-size: 16px;
   color: #475467;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: #ffc531;
 }

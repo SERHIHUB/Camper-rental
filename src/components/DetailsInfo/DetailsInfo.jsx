@@ -2,22 +2,13 @@ import { NavLink, Outlet } from "react-router-dom";
 import clsx from "clsx";
 import { nanoid } from "nanoid";
 import { Button, Icon } from "../../shared";
-import {  useEffect } from "react";
-import {  useDispatch } from "react-redux";
-import { currentCamp } from "../../redux/campers/slice";
+import { useDispatch } from "react-redux";
 import css from "./DetailsInfo.module.css";
 
 const linkClass = ({ isActive }) => clsx(css.nav, { [css.active]: isActive });
 
 const DetailsInfo = ({ camper, handleCloseModal }) => {
   const dispatch = useDispatch();
-  const handleClick = () => {
-    localStorage.setItem("currentCamper", JSON.stringify(camper));
-  };
-
-  useEffect(() => {
-    dispatch(currentCamp(camper._id));
-  }, []);
 
   return (
     <div className={css.container}>
@@ -57,12 +48,12 @@ const DetailsInfo = ({ camper, handleCloseModal }) => {
       <div className={css.details}>
         <p className={css.description}>{camper.description}</p>
         <ul className={css.detailsList}>
-          <li onClick={handleClick}>
+          <li>
             <NavLink className={linkClass} to="features">
               Features
             </NavLink>
           </li>
-          <li onClick={handleClick}>
+          <li>
             <NavLink className={linkClass} to="reviews">
               Reviews
             </NavLink>

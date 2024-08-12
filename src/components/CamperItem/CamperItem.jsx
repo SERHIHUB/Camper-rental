@@ -26,6 +26,7 @@ const CamperItem = ({ camper }) => {
 
   const handleClick = () => {
     openModal();
+    localStorage.setItem("currentCamper", JSON.stringify(camper));
   };
 
   const handleFavoriteClick = () => {

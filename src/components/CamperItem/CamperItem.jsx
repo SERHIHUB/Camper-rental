@@ -24,9 +24,23 @@ const CamperItem = ({ camper }) => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
 
+  const customStyles = {
+    content: {
+      top: "50%",
+      left: "50%",
+      maxHeight: "80vh",
+      overflowY: "auto",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+    },
+  };
+
   const handleClick = () => {
     openModal();
     localStorage.setItem("currentCamper", JSON.stringify(camper));
+    document.body.classList.add("noScroll");
   };
 
   const handleFavoriteClick = () => {
@@ -51,10 +65,14 @@ const CamperItem = ({ camper }) => {
   const handleCloseModal = () => {
     setIsOpen(false);
     document.body.style.backgroundColor = "";
+    document.body.classList.remove("noScroll");
   };
 
   return (
-    <div className={clsx(css.container, { modalIsOpen: css.modalOpen })}>
+    <div
+      className={clsx(css.campContainer, { modalIsOpen: css.modalOpen })}
+      id="camper"
+    >
       <div className={css.photoWrapper}>
         <img className={css.photo} src={camper.gallery[0]} alt="camper" />
       </div>
@@ -97,10 +115,12 @@ const CamperItem = ({ camper }) => {
         </Button>
       </div>
       <MyModal
+        id="modalBody"
         isOpen={modalIsOpen}
         onRequestClose={handleCloseModal}
         onAfterOpen={afterOpenModal}
         contentLabel="Example Modal"
+        customStyles={customStyles}
       >
         <DetailsInfo camper={camper} handleCloseModal={handleCloseModal} />
       </MyModal>

@@ -1,4 +1,4 @@
-.container {
+.campContainer {
   width: 888px;
   padding: 24px;
   display: flex;
@@ -92,8 +92,14 @@
 }
 
 .heartRed {
-  fill: #ff0000;
-  stroke: #ff0000;
+  fill: #e44848;
+  stroke: #e44848;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.heartRed:hover {
+  fill: #d84343;
+  stroke: #d84343;
 }
 
 .description {
@@ -117,6 +123,7 @@
   line-height: 24px;
   color: #fff;
   margin-top: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover {

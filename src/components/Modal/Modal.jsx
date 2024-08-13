@@ -3,25 +3,33 @@ import Modal from "react-modal";
 
 Modal.setAppElement("#root");
 
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    maxHeight: "80vh",
-    overflowY: "auto",
-    right: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-  },
-};
+// const customStyles = {
+//   content: {
+//     top: "50%",
+//     left: "50%",
+//     maxHeight: "80vh",
+//     overflowY: "auto",
+//     right: "auto",
+//     bottom: "auto",
+//     marginRight: "-50%",
+//     transform: "translate(-50%, -50%)",
+//   },
+// };
 
-const MyModal = ({ children, isOpen, onRequestClose, onAfterOpen }) => {
+const MyModal = ({
+  children,
+  isOpen,
+  onRequestClose,
+  onAfterOpen,
+  customStyles,
+  // style = { customStyles },
+}) => {
   return (
     <div>
       <div>
         <Modal
           isOpen={isOpen}
+          // style={style}
           style={customStyles}
           onRequestClose={onRequestClose}
           onAfterOpen={onAfterOpen}
